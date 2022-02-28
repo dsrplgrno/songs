@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Music Category</string>
+    <string name="facebook_app_id">4349566901837479</string>
+    <string name="fb_login_protocol_scheme">fb4349566901837479</string>
+    <string name="todo">TODO</string>
+    <string name="search">Search...</string>
+    <string name="title">Title</string>
+    <string name="facebook_client_token">56789</string>
+
+</resources>

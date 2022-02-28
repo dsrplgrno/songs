@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FF5555"
+    tools:context=".category_panel">
+
+    <ScrollView
+        android:id="@+id/scrollView2"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/fav"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="10dp">
+
+            <LinearLayout
+                android:padding="5dp"
+                android:id="@+id/layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#474545"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/rockmusic"
+                    android:layout_width="130dp"
+                    android:layout_height="130dp"
+                    android:background="@drawable/rockmusic"
+                    app:layout_constraintBottom_toTopOf="@+id/popsong" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:fontFamily="@font/roboto_mono"
+                    android:text="Rock Music"
+                    android:textColor="#FF5555"
+                    android:textSize="12pt" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:padding="5dp"
+                android:id="@+id/layout1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:background="#474545"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/popsong"
+                    android:layout_width="130dp"
+                    android:layout_height="130dp"
+                    android:background="@drawable/popmusic" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:fontFamily="@font/roboto_mono"
+                    android:text="Pop Music"
+                    android:textColor="#FF5555"
+                    android:textSize="12pt" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:padding="5dp"
+                android:id="@+id/layout2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:background="#474545"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/countrymusic"
+                    android:layout_width="130dp"
+                    android:layout_height="130dp"
+                    android:background="@drawable/countrymusic" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:fontFamily="@font/roboto_mono"
+                    android:text="Country Music"
+                    android:textColor="#FF5555"
+                    android:textSize="12pt" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:padding="5dp"
+                android:id="@+id/folk_music"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:background="#474545"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/folkmusic"
+                    android:layout_width="130dp"
+                    android:layout_height="130dp"
+                    android:background="@drawable/folkmusic" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:fontFamily="@font/roboto_mono"
+                    android:text="Folk Music"
+                    android:textColor="#FF5555"
+                    android:textSize="12pt" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/fav"
+        android:layout_width="0dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="110dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="110dp"
+        android:layout_marginBottom="20dp"
+        app:cardBackgroundColor="@color/teal_200"
+        app:cardCornerRadius="5dp"
+        app:layout_constraintBottom_toTopOf="@+id/signoutbtt"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/scrollView2">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:fontFamily="@font/roboto_mono"
+            android:text="Favorite"
+            android:textColor="#FF5555"
+            android:textSize="9pt"
+            android:textStyle="bold" />
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/signoutbtt"
+        android:layout_width="0dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="110dp"
+        android:layout_marginEnd="110dp"
+        android:layout_marginBottom="10dp"
+        android:onClick="sgnOut"
+        app:cardBackgroundColor="@color/teal_200"
+        app:cardCornerRadius="5dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/fav">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:fontFamily="@font/roboto_mono"
+            android:text="Sign Out"
+            android:textColor="#FF5555"
+            android:textSize="9pt"
+            android:textStyle="bold" />
+
+    </androidx.cardview.widget.CardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
